@@ -29,8 +29,7 @@ router.put('/api/employee/update/:id', (req, res) => {
 
     const emp = {
         name: req.body.name,
-        position: req.body.position,
-        office: req.body.office,
+        email: req.body.email,
         salary: req.body.salary
     };
     Employee.findByIdAndUpdate(req.params.id, { $set: emp }, { new: true }, (err, data) => {
